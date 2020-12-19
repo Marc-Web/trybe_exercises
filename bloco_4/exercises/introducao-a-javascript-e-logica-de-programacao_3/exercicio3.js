@@ -1,19 +1,19 @@
 let n = 5;
-let lineIndex;
-let columnIndex;
-let symbol = '*';
-let inputLine = '';
-let inputPosition = n;
+let indexLinha;
+let indexColuna;
+let caractere = '*';
+let linhaDeEntrada = '';
+let posicaoDeEntrada = n;
 
-for (lineIndex = 0; lineIndex < n; lineIndex += 1) {
-  for (columnIndex = 0; columnIndex <= n; columnIndex += 1) {
-    if (columnIndex < inputPosition) {
-      inputLine = inputLine + ' ';
+for (indexLinha = 0; indexLinha < n; indexLinha += 1) {
+  for (indexColuna = 0; indexColuna <= n; indexColuna += 1) {
+    if (indexColuna < posicaoDeEntrada) {
+      linhaDeEntrada = linhaDeEntrada + ' ';
     } else {
-      inputLine = inputLine + symbol;
+      linhaDeEntrada = linhaDeEntrada + caractere;
     }
   }
-  console.log(inputLine);
-  inputLine = '';
-  inputPosition -= 1;
+  console.log(linhaDeEntrada);
+  linhaDeEntrada = '';
+  posicaoDeEntrada -= 1;
 };
