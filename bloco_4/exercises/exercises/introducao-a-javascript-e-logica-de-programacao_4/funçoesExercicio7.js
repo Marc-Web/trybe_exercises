@@ -11,5 +11,5 @@ function verificaFinalDaPalavra(palavra, finalDaPalavra) {
   }
 };
 
-console.log(verificaFinalDaPalavra("trybe", "be")); //true
-console.log(verificaFinalDaPalavra("joaofernando", "fernan")); //false
+console.log(verificaFinalDaPalavra("trybe", "be"));
+console.log(verificaFinalDaPalavra("joaofernando", "fernan"));
