@@ -86,6 +86,16 @@
       imagem.src = 'https://picsum.photos/200';
       container3.appendChild(imagem);
 
+      const listaNaoOrdenada = document.createElement('ul');
+      container4.appendChild(listaNaoOrdenada);
+      const numeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+
+      for (let index = 0; index < numeros.length; index += 1) {
+        let itemLista = document.createElement('li');
+        itemLista.innerHTML = numeros[index];
+        listaNaoOrdenada.appendChild(itemLista);
+      };
+
 /* Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 Adicione a tag div com a classe main-content como filho da tag body ;
 Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
