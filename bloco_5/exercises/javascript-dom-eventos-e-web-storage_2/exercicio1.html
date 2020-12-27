@@ -61,11 +61,14 @@
       titulo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(titulo);
 
-
       const container = document.createElement('div');
       container.className = 'main-content';
       document.body.appendChild(container);
       console.log(container);
+
+      const container2 = document.createElement('div');
+      container2.className = 'center-content';
+      container.appendChild(container2);
 
 /* Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 Adicione a tag div com a classe main-content como filho da tag body ;
