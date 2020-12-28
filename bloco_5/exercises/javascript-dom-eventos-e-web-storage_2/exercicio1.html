@@ -97,12 +97,21 @@
 
       for (let index = 1; index <= 3; index += 1) {
         const subtitulos = document.createElement('h3');
-        subtitulos.className = 'description';
         container.appendChild(subtitulos);
       };
 
+      //Segunda parte
+
       const classeTitulo = document.getElementsByTagName('h1')[0];
       classeTitulo.className = 'title';
+
+      const subtitulos = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1) {
+        subtitulos[index].className = 'description';
+      };
+
+      const removeContainer = document.getElementsByClassName('left-content')[0];
+      container.removeChild(removeContainer);
 
 /* Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 Adicione a tag div com a classe main-content como filho da tag body ;
