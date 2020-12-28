@@ -105,3 +105,23 @@ function trocaTextoDoBtnSextaFeira(arraySextas) {
 };
 
 trocaTextoDoBtnSextaFeira(sextas);
+
+function efeitoZoomIn() {
+  let todosOsDias = document.querySelector('#days');
+  todosOsDias.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+efeitoZoomIn();
+
+function efeitoZoomOut() {
+  let todosOsDias = document.querySelector('#days');
+  todosOsDias.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+efeitoZoomOut();
