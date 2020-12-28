@@ -73,3 +73,13 @@ function clickMudaCor() {
 };
 
 clickMudaCor();
+
+function botaoSextaFeira(nomeDoBotao) {
+  let posicaoDoBotao = document.querySelector('.buttons-container');
+  let botao = document.createElement('button');
+  botao.id = 'btn-friday';
+  botao.innerHTML = nomeDoBotao;
+  posicaoDoBotao.appendChild(botao);
+};
+
+botaoSextaFeira('Sexta-feira');
