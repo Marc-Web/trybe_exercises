@@ -43,3 +43,13 @@ function criaDiasDoMes() {
 };
 
 criaDiasDoMes();
+
+function botaoFeriados(nomeDoBotao) {
+  let posicaoDoBotao = document.querySelector('.buttons-container');
+  let botao = document.createElement('button');
+  let idBotao = 'btn-holiday';
+  botao.innerHTML = nomeDoBotao;
+  posicaoDoBotao.appendChild(botao);
+};
+
+botaoFeriados('feriados');
