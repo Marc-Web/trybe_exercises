@@ -83,3 +83,25 @@ function botaoSextaFeira(nomeDoBotao) {
 };
 
 botaoSextaFeira('Sexta-feira');
+
+let sextas = [4, 11, 18, 25];
+
+function trocaTextoDoBtnSextaFeira(arraySextas) {
+  let botaoSextaFeira = document.querySelector('#btn-friday');
+  let sextasFeiras = document.getElementsByClassName('friday-day');
+  console.log(sextasFeiras);
+  let botaoTexto = 'SEXTOU';
+
+  botaoSextaFeira.addEventListener('click', function() {
+    for (let i = 0; i < sextasFeiras.length; i += 1) {
+      if (sextasFeiras[i].innerHTML !== botaoTexto) {
+        sextasFeiras[i].innerHTML = botaoTexto;
+      } else {
+        sextasFeiras[i].innerHTML = arraySextas[i];
+      }
+      console.log(sextasFeiras);
+    }
+  })
+};
+
+trocaTextoDoBtnSextaFeira(sextas);
