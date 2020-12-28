@@ -59,7 +59,6 @@
     <script>
       const titulo = document.createElement('h1');
       titulo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-      titulo.className = 'title';
       document.body.appendChild(titulo);
 
       const container = document.createElement('div');
@@ -98,10 +97,12 @@
 
       for (let index = 1; index <= 3; index += 1) {
         const subtitulos = document.createElement('h3');
+        subtitulos.className = 'description';
         container.appendChild(subtitulos);
       };
 
-
+      const classeTitulo = document.getElementsByTagName('h1')[0];
+      classeTitulo.className = 'title';
 
 /* Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 Adicione a tag div com a classe main-content como filho da tag body ;
