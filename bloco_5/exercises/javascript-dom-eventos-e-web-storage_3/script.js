@@ -125,3 +125,12 @@ function efeitoZoomOut() {
 };
 
 efeitoZoomOut();
+
+function insereTarefa(tarefa) {
+  let posicaoDaTarefa = document.querySelector('.my-tasks');
+  let elementoTarefa = document.createElement('span');
+  elementoTarefa.innerHTML = tarefa;
+  posicaoDaTarefa.appendChild(elementoTarefa);
+};
+
+insereTarefa('Novo projeto:');
