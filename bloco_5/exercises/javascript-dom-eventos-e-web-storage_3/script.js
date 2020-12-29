@@ -134,3 +134,13 @@ function insereTarefa(tarefa) {
 };
 
 insereTarefa('Novo projeto:');
+
+function insereCorTarefa(cor) {
+  let posicaoDaLegenda = document.querySelector('.my-tasks');
+  let elementoLegenda = document.createElement('div');
+  elementoLegenda.className = 'task';
+  elementoLegenda.style.backgroundColor = cor;
+  posicaoDaLegenda.appendChild(elementoLegenda);
+};
+
+insereCorTarefa('blue');
