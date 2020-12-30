@@ -177,3 +177,29 @@ function marcaDiaTarefa() {
 };
 
 marcaDiaTarefa();
+
+function criaTarefas() {
+  let campoEntrada = document.querySelector('#task-input');
+  let botaoEntrada = document.querySelector('#btn-add');
+  let listaTarefas = document.querySelector('.task-list');
+  botaoEntrada.addEventListener('click', function() {
+    if (campoEntrada.value.length > 0) {
+      let itemLista = document.createElement('li');
+      itemLista.innerText = campoEntrada.value;
+      listaTarefas.appendChild(itemLista);
+      campoEntrada.value = '';
+    } else {
+      alert('Error: digite ao menos 1 caractere.');
+    }
+  });
+  campoEntrada.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && campoEntrada.value.length > 0) {
+      let itemLista = document.createElement('li');
+      itemLista.innerText = campoEntrada.value;
+      listaTarefas.appendChild(itemLista);
+      campoEntrada.value = '';
+    }
+  });
+};
+
+criaTarefas();
