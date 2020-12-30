@@ -144,3 +144,36 @@ function insereCorTarefa(cor) {
 };
 
 insereCorTarefa('blue');
+
+function selecionaTarefa() {
+  let tarefaSelecionada = document.getElementsByClassName('task selected');
+  let tarefa = document.querySelector('.task');
+  tarefa.addEventListener('click', function(event) {
+      if (tarefaSelecionada.length === 0) {
+        event.target.className = 'task selected';
+      } else {
+        event.target.className = 'task';
+      }
+  });
+};
+
+selecionaTarefa();
+
+function marcaDiaTarefa() {
+  let tarefaSelecionada = document.getElementsByClassName('task selected');
+  let todosOsDias = document.querySelector('#days');
+  let tarefa = document.querySelector('.task');
+  let corDaTarefa = tarefa.style.backgroundColor;
+  todosOsDias.addEventListener('click', function(event) {
+    let eventoCor = event.target.style.color;
+    if (tarefaSelecionada.length > 0 && eventoCor !== corDaTarefa) {
+      console.log(tarefaSelecionada);
+      let cor = tarefaSelecionada[0].style.backgroundColor;
+      event.target.style.color = cor;
+    } else if (eventoCor === corDaTarefa && tarefaSelecionada.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+marcaDiaTarefa();
