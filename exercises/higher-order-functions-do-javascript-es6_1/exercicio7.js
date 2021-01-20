@@ -70,7 +70,6 @@ function authorUnique() {
     !books.some((data)=>
       (data.author.birthYear === book.author.birthYear) && (data.author.name !== book.author.name)
   ));
-  console.log(mesmoAnoDeNascimento);
   return mesmoAnoDeNascimento;
 }
 
